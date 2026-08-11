@@ -7,10 +7,6 @@ __pycache__/
 .coverage
 htmlcov/
 
-# Базы данных
-*.db
-*.sqlite3
-
 # Файлы с секретами
 .env
 .env.*
@@ -26,3 +22,6 @@ config.local.py
 .DS_Store
 Thumbs.db
 *.log
+
+# Виртуальное окружение
+.venv 
