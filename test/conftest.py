@@ -5,7 +5,7 @@ from app.bot.database.models import User
 from app.bot.database.base import Base
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
 from httpx import AsyncClient, ASGITransport
-from api_backend import app 
+from backend_app import app 
 
 
 load_dotenv()
