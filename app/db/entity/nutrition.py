@@ -14,6 +14,8 @@ class NutritionEntity(Base):
     proteins = Column(Integer, nullable=False)
     fat = Column(Integer, nullable=False)
     carbs = Column(Integer, nullable=False)
+    file_id = Column(String, nullable=True)
+    file_type = Column(String, nullable=True)
     
     date = Column(DateTime, default=utc_now, nullable=False)
     updated_at = Column(DateTime, default=utc_now, onupdate=utc_now)
