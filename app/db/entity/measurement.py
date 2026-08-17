@@ -1,10 +1,10 @@
 from sqlalchemy import Column, Integer, Float, ForeignKey
 from sqlalchemy.orm import relationship
 
-from app.db.base import Base
+from app.db.entity.BaseEntity import BaseEntity
 from app.utils.date_time_utils import utc_now
 
-class MeasurementsEntity(Base):
+class MeasurementsEntity(BaseEntity):
     __tablename__ = "measurements"
 
     id = Column(Integer, primary_key=True)

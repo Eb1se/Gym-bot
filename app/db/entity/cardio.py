@@ -1,11 +1,11 @@
 from sqlalchemy import Column, Integer, String, Float, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
 
-from app.db.base import Base
+from app.db.entity.BaseEntity import BaseEntity
 from app.utils.date_time_utils import utc_now
 
 
-class CardioEntity(Base):
+class CardioEntity(BaseEntity):
     __tablename__ = "cardio"
 
     id = Column(Integer, primary_key=True)

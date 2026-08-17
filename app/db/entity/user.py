@@ -1,11 +1,11 @@
 from sqlalchemy import Column, Integer, String, BigInteger, DateTime, Boolean, JSON
 from sqlalchemy.orm import relationship
 
-from app.db.base import Base
+from app.db.entity.BaseEntity import BaseEntity
 from app.utils.date_time_utils import utc_now
 
 
-class UserEntity(Base):
+class UserEntity(BaseEntity):
     __tablename__ = "users"
 
     id = Column(Integer, primary_key=True)

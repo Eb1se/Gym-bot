@@ -1,11 +1,11 @@
 from sqlalchemy import Column, Integer, String, Float, Text, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
 
-from app.db.base import Base
+from app.db.entity.BaseEntity import BaseEntity
 from app.utils.date_time_utils import utc_now
 
 
-class WorkoutEntity(Base):
+class WorkoutEntity(BaseEntity):
     __tablename__ = "workouts"
 
     id = Column(Integer, primary_key=True)
@@ -19,7 +19,7 @@ class WorkoutEntity(Base):
     sets = relationship("SetEntity", back_populates="workout", cascade="all, delete-orphan")
 
 
-class SetEntity(Base):
+class SetEntity(BaseEntity):
     __tablename__ = "sets"
 
     id = Column(Integer, primary_key=True)

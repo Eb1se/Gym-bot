@@ -1,11 +1,11 @@
 from sqlalchemy import Column, Integer, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
 
-from app.db.base import Base
+from app.db.entity.BaseEntity import BaseEntity
 from app.utils.date_time_utils import utc_now
 
 
-class NutritionEntity(Base):
+class NutritionEntity(BaseEntity):
     __tablename__ = "nutritions"
 
     id = Column(Integer, primary_key=True)
